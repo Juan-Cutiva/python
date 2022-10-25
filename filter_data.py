@@ -82,8 +82,9 @@ def run():
     all_platzi_workers = list(filter(lambda worker: worker["organization"] == "Platzi", DATA))
     adults = [worker["name"] for worker in DATA if worker["age"]> 18]
     old_people = [worker["name"] for worker in DATA if worker["age"]> 70]
+    young_people = [worker["name"] for worker in DATA if worker["age"]< 18]
 
-    for worker in old_people:
+    for worker in young_people:
         print(worker)
 
  
